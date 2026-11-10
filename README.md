@@ -1,4 +1,4 @@
-# Hi, I'm Mckarah-coder 👋
+# Mark Karanja | Python Developer | Automation & AI Tools
 
 Building practical tools that solve real-world problems through Python, automation, data, and AI. Based in Kenya 🇰🇪
 
