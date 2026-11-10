@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark Karanja | Python Developer</title>
+    <meta
+      name="description"
+      content="Mark Karanja is a Python developer building automation, AI tools, dashboards, and browser-based apps."
+    />
+    <style>
+      :root {
+        --bg: #0b1020;
+        --panel: #121a2c;
+        --panel-alt: #1a2438;
+        --text: #e6edf7;
+        --muted: #a9b9d2;
+        --accent: #7dd3fc;
+        --accent-2: #86efac;
+        --border: rgba(148, 163, 184, 0.22);
+        --shadow: rgba(15, 23, 42, 0.4);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(180deg, #0b1020 0%, #101827 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        width: min(1100px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 2rem 0 1rem;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1rem;
+      }
+
+      .brand {
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        color: var(--muted);
+      }
+
+      main {
+        padding: 2rem 0 4rem;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        padding: 3rem 0 2rem;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 5vw, 4.4rem);
+        line-height: 1.1;
+        margin: 0 0 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.15rem;
+        color: var(--muted);
+        margin-bottom: 1.5rem;
+        max-width: 60ch;
+      }
+
+      .tag {
+        display: inline-block;
+        background: rgba(125, 211, 252, 0.12);
+        color: var(--accent);
+        border: 1px solid rgba(125, 211, 252, 0.25);
+        border-radius: 999px;
+        padding: 0.45rem 0.8rem;
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+        margin-bottom: 1rem;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 0.85rem 1.2rem;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        font-weight: 600;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+
+      .button:hover {
+        text-decoration: none;
+        transform: translateY(-1px);
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: #03131d;
+        border-color: transparent;
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--text);
+      }
+
+      .profile-card {
+        background: linear-gradient(180deg, rgba(26, 36, 56, 0.95), rgba(18, 26, 44, 0.95));
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 1.5rem;
+        box-shadow: 0 18px 40px var(--shadow);
+      }
+
+      .profile-card h2 {
+        margin-top: 0;
+        font-size: 1.1rem;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .profile-card .info {
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .profile-item {
+        background: rgba(148, 163, 184, 0.04);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.9rem 1rem;
+      }
+
+      .profile-item strong {
+        display: block;
+        color: var(--text);
+        margin-bottom: 0.2rem;
+      }
+
+      .section {
+        padding-top: 2rem;
+      }
+
+      .section h2 {
+        margin-bottom: 1.2rem;
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.2rem;
+      }
+
+      .card {
+        background: rgba(18, 26, 44, 0.9);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.25rem 1.2rem;
+      }
+
+      .card h3 {
+        margin-top: 0;
+        margin-bottom: 0.6rem;
+      }
+
+      ul {
+        padding-left: 1.2rem;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      li + li {
+        margin-top: 0.5rem;
+      }
+
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 1rem;
+      }
+
+      .chip {
+        background: rgba(134, 239, 172, 0.08);
+        border: 1px solid rgba(134, 239, 172, 0.2);
+        color: var(--accent-2);
+        padding: 0.45rem 0.7rem;
+        border-radius: 999px;
+        font-size: 0.9rem;
+      }
+
+      .footer {
+        padding: 2rem 0 4rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 800px) {
+        .hero,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">MARK KARANJA</div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#stack">Tech Stack</a>
+          <a href="#connect">Connect</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero" id="about">
+        <div>
+          <div class="tag">Python Developer • Automation &amp; AI Tools</div>
+          <h1>Mark Karanja</h1>
+          <p class="subtitle">
+            Building practical tools that solve real-world problems through Python,
+            automation, data, and AI. Based in Kenya 🇰🇪
+          </p>
+
+          <div class="cta-row">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button secondary" href="https://github.com/Mckarah-coder" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <h2>What I Build</h2>
+          <div class="info">
+            <div class="profile-item">
+              <strong>Data &amp; Reporting</strong>
+              Python, pandas, and NumPy for analysis and reporting tools.
+            </div>
+            <div class="profile-item">
+              <strong>APIs &amp; Dashboards</strong>
+              Tools that collect, organize, and export live data efficiently.
+            </div>
+            <div class="profile-item">
+              <strong>Machine Learning</strong>
+              Prediction and coaching systems built with practical AI workflows.
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3><a href="https://github.com/Mckarah-coder/smp-tracker" target="_blank" rel="noreferrer">smp-tracker</a></h3>
+            <p>
+              A daily fitness tracker that uses a Random Forest model to predict step-goal
+              achievement, provide a confidence score, and coach users through progress.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/Mckarah-coder/api-dashboard" target="_blank" rel="noreferrer">api-dashboard</a></h3>
+            <p>
+              A multi-endpoint dashboard that groups live data by protocol and exports JSON reports.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/Mckarah-coder/data-analysis-report" target="_blank" rel="noreferrer">data-analysis-report</a></h3>
+            <p>
+              A 28-day fitness-log analysis with weekly breakdowns and protocol comparisons.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/Mckarah-coder/browser-coach" target="_blank" rel="noreferrer">browser-coach</a></h3>
+            <p>
+              A client-side JavaScript prediction and coaching tool that runs entirely in the browser.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="stack">
+        <h2>Tech Stack</h2>
+        <div class="card">
+          <p><strong>Languages:</strong> Python · JavaScript</p>
+          <p><strong>Data &amp; Machine Learning:</strong> pandas · NumPy · scikit-learn</p>
+          <p><strong>Backend &amp; APIs:</strong> FastAPI</p>
+          <p><strong>Browser:</strong> DOM · Fetch API</p>
+          <p><strong>Tools:</strong> Git · GitHub</p>
+
+          <div class="tech-stack" aria-label="Technology tags">
+            <span class="chip">Python</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">scikit-learn</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="connect">
+        <h2>Connect</h2>
+        <div class="card">
+          <ul>
+            <li>GitHub: <a href="https://github.com/Mckarah-coder" target="_blank" rel="noreferrer">@Mckarah-coder</a></li>
+            <li>Current focus: building useful data-driven applications, exploring prediction and automation, and sharing what I learn through hands-on projects.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>Always learning, building, and improving—one project at a time.</p>
+    </footer>
+  </body>
+</html>
