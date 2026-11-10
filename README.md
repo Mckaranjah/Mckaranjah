@@ -12,11 +12,11 @@ Building practical tools that solve real-world problems through Python, automati
 
 ## Featured Projects
 
-- [**smp-tracker**](https://github.com/Mckarah-coder/smp-tracker) — A daily fitness tracker that uses a Random Forest model to predict step-goal achievement, provide a confidence score and coaching message, and export weekly summaries.
-- [**api-dashboard**](https://github.com/Mckarah-coder/api-dashboard) — A multi-endpoint dashboard that groups live data by protocol and exports JSON reports.
-- [**data-analysis-report**](https://github.com/Mckarah-coder/data-analysis-report) — A 28-day fitness-log analysis with weekly breakdowns and protocol comparisons.
-- [**browser-coach**](https://github.com/Mckarah-coder/browser-coach) — A client-side JavaScript prediction and coaching tool that runs entirely in the browser.
-- [**Portfolio**](https://github.com/Mckarah-coder/Mckarah-coder.github.io) — My personal portfolio site, published with GitHub Pages.
+- [**smp-tracker**](https://github.com/Mckaranjah/smp-tracker) — A daily fitness tracker that uses a Random Forest model to predict step-goal achievement, provide a confidence score and coaching message, and export weekly summaries.
+- [**api-dashboard**](https://github.com/Mckaranjah/api-dashboard) — A multi-endpoint dashboard that groups live data by protocol and exports JSON reports.
+- [**data-analysis-report**](https://github.com/Mckaranjah/data-analysis-report) — A 28-day fitness-log analysis with weekly breakdowns and protocol comparisons.
+- [**browser-coach**](https://github.com/Mckaranjah/browser-coach) — A client-side JavaScript prediction and coaching tool that runs entirely in the browser.
+- [**Portfolio**](https://github.com/Mckaranjah/Mckaranjah.github.io) — My personal portfolio site, published with GitHub Pages.
 
 ## Tech Stack
 
@@ -36,7 +36,7 @@ Building useful data-driven applications, exploring prediction and automation, a
 
 ## Connect
 
-- GitHub: [@Mckarah-coder](https://github.com/Mckarah-coder)
+- GitHub: [@Mckaranjah](https://github.com/Mckaranjah)
 
 ---
 
